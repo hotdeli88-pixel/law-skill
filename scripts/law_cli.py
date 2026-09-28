@@ -20,8 +20,13 @@ from law_api import LawApiClient, format_article_text
 from law_verify import LawCitationVerifier
 from law_team import LawAgentTeam
 
+DEPRECATION = ("[지원 종료] law 스킬은 legal-ultra v2 로 통합되었습니다. 이 CLI 의 verify 는 존재하지 않는 조문·판례를 "
+               "통과시키는 결함이 있으니 결과를 신뢰하지 마십시오: https://github.com/hotdeli88-pixel/legal-ultra")
+
+
 def main():
-    parser = argparse.ArgumentParser(description="대한민국 법령·판례 기반 법률 검토 CLI (open.law.go.kr)")
+    print(DEPRECATION, file=sys.stderr)
+    parser = argparse.ArgumentParser(description="[지원 종료] 대한민국 법령·판례 기반 법률 검토 CLI (open.law.go.kr) - legal-ultra v2 를 사용하세요")
     subparsers = parser.add_subparsers(dest="command", help="실행할 서브 명령")
 
     # 1. search
