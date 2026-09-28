@@ -3,7 +3,7 @@ name: law
 description: "[지원 종료 — legal-ultra v2 로 통합됨] 이 스킬은 더 이상 법률 검토에 쓰지 않는다. 법률 검토·자문·의견서·조문/판례 확인·인용 검증 요청은 legal-ultra 스킬을 사용할 것. 이 스킬의 인용 검증기는 존재하지 않는 조문·판례를 통과시키는 결함이 확인되었다."
 metadata:
   version: "1.0.1-deprecated"
-  superseded_by: "legal-ultra 2.0.0 (https://github.com/hotdeli88-pixel/legal-ultra)"
+  superseded_by: "legal-ultra 2.1.0 이상 (https://github.com/hotdeli88-pixel/legal-ultra)"
 ---
 
 # ⚠️ 지원 종료: `law` 스킬 → `legal-ultra` v2
@@ -31,12 +31,14 @@ metadata:
 rm -rf ~/.claude/skills/law        # 설치 위치에 맞게
 # 2) 통합 스킬 설치
 git clone https://github.com/hotdeli88-pixel/legal-ultra ~/.claude/skills/legal-ultra
-python3 ~/.claude/skills/legal-ultra/scripts/legal.py setup
+python3 ~/.claude/skills/legal-ultra/scripts/legal.py setup     # 법령 전체 이력(약 540MB) + 판례 색인
 ```
+
+v2.0.0 도 2차 적대적 검토에서 결함(삭제·미시행 조항 통과 등)이 확인되어 v2.1.0 에서 고쳤다 — **2.1.0 이상**을 쓴다.
 
 | v1 `law_cli.py` | v2 `legal.py` |
 |---|---|
-| `article "근로기준법" 60` | `article 근로기준법 60 [--hang N] [--as-of D]` (시행일 판정 포함) |
+| `article "근로기준법" 60` | `article 근로기준법 60 [--hang N] [--ho N] [--as-of D]` (기준일 문언·시행 전 개정 문언 표시) |
 | `thdcmp "…"` | `thdcmp "…"` 또는 `delegated "…" <조> --api` |
 | `precedent 2023다216777` | `precedent 2023다216777` (precedent-kr 오프라인 색인 + DRF) |
 | `interpretation "개인정보"` | `interpretation "개인정보" [--target moelCgmExpc]` |
