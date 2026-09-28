@@ -3,7 +3,7 @@ name: law
 description: "[지원 종료 — legal-ultra v2 로 통합됨] 이 스킬은 더 이상 법률 검토에 쓰지 않는다. 법률 검토·자문·의견서·조문/판례 확인·인용 검증 요청은 legal-ultra 스킬을 사용할 것. 이 스킬의 인용 검증기는 존재하지 않는 조문·판례를 통과시키는 결함이 확인되었다."
 metadata:
   version: "1.0.1-deprecated"
-  superseded_by: "legal-ultra 2.1.0 이상 (https://github.com/hotdeli88-pixel/legal-ultra)"
+  superseded_by: "legal-ultra 2.2.0 이상 (https://github.com/hotdeli88-pixel/legal-ultra)"
 ---
 
 # ⚠️ 지원 종료: `law` 스킬 → `legal-ultra` v2
@@ -34,7 +34,8 @@ git clone https://github.com/hotdeli88-pixel/legal-ultra ~/.claude/skills/legal-
 python3 ~/.claude/skills/legal-ultra/scripts/legal.py setup     # 법령 전체 이력(약 540MB) + 판례 색인
 ```
 
-v2.0.0 도 2차 적대적 검토에서 결함(삭제·미시행 조항 통과 등)이 확인되어 v2.1.0 에서 고쳤다 — **2.1.0 이상**을 쓴다.
+v2.0.0 도 2차 적대적 검토에서 결함(삭제·미시행 조항 통과 등)이 확인되어 v2.1.0 에서, v2.1.0 은 3차 검토에서 결함(부칙 단서 누락으로
+시행 전 문언 통과, 전원합의체 허위 표기, 숨긴 마크업 등)이 확인되어 v2.2.0 에서 고쳤다 — **2.2.0 이상**을 쓴다.
 
 | v1 `law_cli.py` | v2 `legal.py` |
 |---|---|
