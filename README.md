@@ -1,3 +1,16 @@
+> ## ⚠️ 지원 종료 — [legal-ultra v2](https://github.com/hotdeli88-pixel/legal-ultra)로 통합되었습니다
+>
+> 2026-09-28 적대적 검토에서 이 스킬의 인용 검증기가 **존재하지 않는 조문·판례를 통과시키는** 결함
+> (가지조문 `제76조의9` → 제76조로 대조, 사건번호 불일치 시 첫 검색결과 반환, 인용 0건이면 100% PASSED 등)과
+> API target 코드·응답 키 오류가 확인되었습니다. 이 저장소의 코드는 더 이상 사용하지 마십시오.
+>
+> - 재현 근거와 전체 결함 목록: legal-ultra 저장소 [`docs/REVIEW-2026-09-28.md`](https://github.com/hotdeli88-pixel/legal-ultra/blob/main/docs/REVIEW-2026-09-28.md)
+> - 이전 방법: [`SKILL.md`](SKILL.md) 의 "이전(migration)" 절
+>
+> 아래는 v1.0.0 당시의 설명으로, 기록 보존 목적으로만 남겨 둡니다.
+
+---
+
 # law-skill: 대한민국 법제처 OpenAPI 기반 5인 전문 법률 검토 에이전트 팀
 
 대한민국 법제처 국가법령정보 공동활용(`https://open.law.go.kr`)의 191개 공공 법률 API 엔드포인트를 실시간 연동하여, 가짜 조문이나 왜곡된 판례 인용을 원천 차단(Zero-Hallucination Gate)하고 최고 수준의 법률 검토 및 자문의견서(Legal Opinion)를 생성하는 에이전트 팀 스킬입니다.
